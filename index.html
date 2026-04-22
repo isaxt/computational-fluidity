@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLITCH.LOG :: Computational Fluidity Research Terminal</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- FLOATING POPUPS — narrative-charged -->
+<div class="popup" id="popup-welcome">
+  <div class="popup-titlebar">
+    <div class="title-text"><img src="assets/critical_exception.png" class="titlebar-img" alt=""> System Integrity Exception</div>
+    <div class="popup-controls">
+      <div class="popup-btn">_</div>
+      <div class="popup-btn">□</div>
+      <div class="popup-btn" onclick="this.closest('.popup').remove()">✕</div>
+    </div>
+  </div>
+  <div class="popup-body">
+    <img src="assets/system_integrity.png" alt="system integrity" style="width:100%;display:block;image-rendering:pixelated;margin-bottom:8px;">
+    <div class="popup-text">WARNING: A glitch has been detected.<br>This is not an error. This is the system<br>revealing itself. <span class="blink-red">Do not look away.</span></div>
+  </div>
+  <div class="popup-footer">
+    <button class="win-btn" onclick="this.closest('.popup').remove()">ACKNOWLEDGE</button>
+    <button class="win-btn" onclick="this.closest('.popup').remove()">DENY</button>
+  </div>
+</div>
+
+<div class="popup" id="popup-error">
+  <div class="popup-titlebar">
+    <div class="title-text"><img src="assets/x_button.png" class="titlebar-img" alt=""> Fatal Glitch — Data Null</div>
+    <div class="popup-controls">
+      <div class="popup-btn">✕</div>
+    </div>
+  </div>
+  <div class="popup-body">
+    <img src="assets/data_null.png" alt="data null" style="width:100%;display:block;image-rendering:pixelated;margin-bottom:6px;">
+    <div class="popup-text">The seamless interface is a fiction.<br>Every smooth surface hides a seam.<br>Every clean binary conceals a spectrum.</div>
+  </div>
+  <div class="popup-footer">
+    <button class="win-btn" onclick="this.closest('.popup').remove()">OK</button>
+  </div>
+</div>
+
+<div class="popup" id="popup-update">
+  <div class="popup-titlebar">
+    <div class="title-text"><img src="assets/null_state.png" class="titlebar-img" alt=""> Null State Wizard</div>
+    <div class="popup-controls">
+      <div class="popup-btn">✕</div>
+    </div>
+  </div>
+  <div class="popup-body">
+    <img src="assets/null_state.png" alt="null state" style="width:100%;display:block;image-rendering:pixelated;margin-bottom:6px;">
+    <div class="popup-text">You are currently null.<br>This wizard cannot proceed.<br>Click OK to continue being null.</div>
+  </div>
+  <div class="popup-footer">
+    <button class="win-btn" onclick="this.closest('.popup').remove()">OK</button>
+  </div>
+</div>
+
+<div class="popup" id="popup-cdrom">
+  <div class="popup-titlebar">
+    <div class="title-text"><img src="assets/warning_popup.png" class="titlebar-img" alt=""> Warning</div>
+    <div class="popup-controls">
+      <div class="popup-btn">?</div>
+      <div class="popup-btn">✕</div>
+    </div>
+  </div>
+  <div class="popup-body">
+    <img src="assets/warning_popup.png" alt="warning" style="width:100%;display:block;image-rendering:pixelated;margin-bottom:6px;">
+    <div class="popup-text">A recordable error occurred.<br>Switching error. Please wait.<br><em>[This wait is political.]</em></div>
+  </div>
+  <div class="popup-footer">
+    <button class="win-btn" onclick="this.closest('.popup').remove()">OK</button>
+  </div>
+</div>
+
+<!-- MAIN SITE -->
+<div class="site-wrapper">
+
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-title">✦ GLITCH.LOG ✦</div>
+    <div class="banner-sub">~*~ Computational Fluidity Research Terminal v0.ERROR ~*~</div>
+  </div>
+
+  <!-- SPRITE BAR -->
+  <div class="sprite-bar">
+    <img src="assets/computer.png"        alt="computer"    title="Terminal Access">
+    <img src="assets/floppy_disk.png"     alt="floppy"      title="Floppy: Save the State">
+    <img src="assets/ms_prompt.png"       alt="ms-dos"      title="MS-DOS Prompt">
+    <img src="assets/keyboard.png"        alt="keyboard"    title="Input Device">
+    <img src="assets/cd_paint.png"        alt="cd"          title="Media">
+    <img src="assets/pen_paper.png"       alt="notes"       title="Field Notes">
+    <img src="assets/folder.png"          alt="folder"      title="Archive">
+    <img src="assets/asset5.png"          alt="chip"        title="The Chip Remembers">
+    <span class="adopt-label">⟵ GLITCH IS NOT FAILURE ⟶</span>
+    <img src="assets/x_button.png"        alt="x"           title="Delete? Or Reveal?">
+  </div>
+
+  <!-- THREE COLUMNS -->
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div>
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title"><img src="assets/folder.png" class="nav-icon-img" alt=""> Navigate</div>
+        <div class="panel-body" style="padding:4px 0;">
+          <ul class="nav-links">
+            <li><a href="#"><img class="nav-icon" src="assets/folder.png" alt="">Home</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/computer.png" alt="">Terminal</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/pen_paper.png" alt="">Field Notes</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/glitch_swirl.png" alt="">Glitch Archive</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/floppy_disk.png" alt="">Data Leaks</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/paint_palette.png" alt="">Artifact Lab</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/folder.png" alt="">Links</a></li>
+            <li><a href="#"><img class="nav-icon" src="assets/ok.png" alt="">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title"><img src="assets/computer.png" class="nav-icon-img" alt=""> Observers</div>
+        <div class="panel-body">
+          <div class="visitor-counter">
+            <div class="visitor-digits">0031337</div>
+            <div class="visitor-label">systems exposed since 2024</div>
+          </div>
+          <div style="text-align:center; margin-top:6px;">
+            <span class="construction">🚧 UNDER DECONSTRUCTION 🚧</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title"><img src="assets/asset5.png" class="nav-icon-img" alt=""> Glitch Taxonomy</div>
+        <div class="panel-body">
+          <div class="asset-row" style="flex-wrap:wrap; justify-content:flex-start; gap:6px;">
+            <img src="assets/broadcast_failure.png" alt="broadcast failure" title="Broadcast Failure — signal loss as critique" style="height:40px;">
+            <img src="assets/glitch_feeling.png"    alt="glitch feeling"   title="Glitch Feeling — affect as data" style="height:40px;">
+            <img src="assets/glitch_swirl.png"      alt="glitch swirl"     title="Glitch Swirl — the hidden vortex" style="height:40px;">
+            <img src="assets/code_crack.png"        alt="code crack"       title="Code Crack — where meaning leaks" style="height:40px;">
+          </div>
+          <div style="text-align:center; margin-top:6px; font-size:13px; color:#555;">hover for annotations!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER COLUMN -->
+    <div>
+      <div class="farm-display" style="margin-bottom:8px;">
+        <div class="farm-label">📡 PRIMARY DOCUMENT :: "The Seam" [Code Crack Series, 2024]</div>
+        <img src="assets/code_crack.png" alt="Code Crack" style="width:100%; display:block; image-rendering:pixelated;">
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+        <div class="farm-display">
+          <div class="farm-label">📡 Popup Collection I</div>
+          <img src="assets/popup_collection.png" alt="Popup Collection">
+        </div>
+        <div class="farm-display">
+          <div class="farm-label">📡 Broadcast Failure</div>
+          <img src="assets/broadcast_failure.png" alt="Broadcast Failure">
+        </div>
+      </div>
+
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title">
+          <img src="assets/ms_prompt.png" class="terminal-title-img" alt="terminal">
+          GLITCH.LOG Terminal — Research Interface v0.ERROR
+        </div>
+        <div class="panel-body" style="padding:0;">
+          <div class="terminal-box">
+            <div class="terminal-text">
+              GLITCH.LOG > <span style="color:white;">init_research.bat</span><br>
+              Loading: computational_fluidity.exe...<br>
+              Status: FAILURE (this is expected)<br>
+              ──────────────────────────────────<br>
+              [!] Glitch is not error.<br>
+              [!] Glitch is EXPOSURE.<br>
+              [!] The seamless is the lie.<br>
+              ──────────────────────────────────<br>
+              Binaries crumbling... <span style="color:#ffff00;">done.</span><br>
+              Hidden politics: <span style="color:#ff4444;">VISIBLE</span><br>
+              > <span class="cursor-blink">_</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title"><img src="assets/pen_paper2.png" class="terminal-title-img" alt=""> Thesis :: Computational Fluidity</div>
+        <div class="panel-body">
+          <p class="about-text">
+            welcome 2 <span class="highlight">GLITCH.LOG</span> — a research terminal dedicated to the study of digital breakdowns as <span class="highlight">political acts</span>!! 🖥️<br><br>
+            computational fluidity argues that <span class="highlight">glitches and system "failures"</span> are not errors — they reveal how digital technologies <span class="highlight">ACTUALLY function</span>. the smooth interface is a <span class="blink">FICTION</span>.<br><br>
+            every popup, every crash, every frozen cursor <span class="highlight">exposes the hidden politics</span> behind supposedly seamless systems. failure is not the opposite of function — it IS the function, made <span class="highlight">visible</span>. ✦
+          </p>
+          <div class="badges">
+            <div class="badge purple">Glitch Theory</div>
+            <div class="badge teal">Digital Failure</div>
+            <div class="badge maroon">System Politics</div>
+            <div class="badge">Computational Fluidity</div>
+            <div class="badge teal">Anti-Binary</div>
+            <div class="badge purple">Breakdown Research</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title"><img src="assets/paint_palette.png" class="nav-icon-img" alt=""> Glitch Art Archive</div>
+        <div class="panel-body" style="padding:4px;">
+          <img src="assets/glitchy_popups.png" alt="Glitchy Popups" style="width:100%; display:block; image-rendering:pixelated; margin-bottom:4px;">
+          <div style="font-size:13px; color:#555; text-align:center;">fig. 1 — the cascade of collapse</div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title"><img src="assets/cd_paint.png" class="nav-icon-img" alt=""> windows_page.render</div>
+        <div class="panel-body" style="padding:4px;">
+          <img src="assets/windows_page.png" alt="Windows Page" style="width:100%; display:block; image-rendering:pixelated;">
+        </div>
+      </div>
+
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title"><img src="assets/glitch_swirl.png" class="nav-icon-img" alt=""> Today's Mode</div>
+        <div class="panel-body">
+          <div style="text-align:center; display:flex; justify-content:center; gap:10px; align-items:flex-end;">
+            <img src="assets/toaster_looking.png" alt="toaster" style="image-rendering:pixelated; height:48px; animation:float 1.5s ease-in-out infinite;">
+            <img src="assets/existential_inquiry.png" alt="existential" style="image-rendering:pixelated; height:36px; animation:float 1.5s ease-in-out 0.4s infinite;">
+          </div>
+          <div style="font-size:15px; text-align:center; margin-top:6px; color:#800080;">
+            ✨ politically conscious glitch researcher ✨<br>
+            <span style="font-size:13px; color:#555;">now playing: dial-up modem screech</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title"><img src="assets/ok.png" class="nav-icon-img" alt=""> Cool Links</div>
+        <div class="panel-body">
+          <ul class="nav-links" style="font-size:14px;">
+            <li><a href="#">Rosa Menkman — Glitch Studies</a></li>
+            <li><a href="#">Legacy Russell — Glitch Feminism</a></li>
+            <li><a href="#">Archive.org</a></li>
+            <li><a href="#">Net Art Archive</a></li>
+            <li><a href="#">Software Studies Initiative</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIELD NOTES / DIARY SECTION -->
+  <div class="woven-section" style="margin-bottom:8px;">
+    <div class="panel-title">
+      <img src="assets/pen_paper.png" class="terminal-title-img" alt="">
+      Field Notes — Research Journal v1.0
+    </div>
+    <div style="display:grid; grid-template-columns:180px 1fr;">
+      <div style="background:#a0a0a0; border-right:2px solid #404040; padding:4px;">
+        <ul class="diary-entry-list">
+          <li class="active" onclick="showEntry(0, this)">Session 04 — Dec</li>
+          <li onclick="showEntry(1, this)">Session 03 — Nov</li>
+          <li onclick="showEntry(2, this)">Session 02 — Oct</li>
+          <li onclick="showEntry(3, this)">Session 01 — Sep</li>
+        </ul>
+      </div>
+      <div class="diary-content" id="diary-text">
+        <div class="diary-date">Session 04, December:</div>
+        The popup cascade experiment worked. Spawned 47 error dialogs simultaneously — the machine didn't crash, it SPOKE. Each "error" was the system confessing its architecture. You can't look at a Windows dialog the same way after you've seen 47 of them screaming at once. The interface is not neutral. It never was.
+      </div>
+    </div>
+  </div>
+
+  <!-- DESKTOP ICON BAR -->
+  <div class="desktop-bar">
+    <div class="desktop-icon">
+      <img src="assets/computer.png" alt="Computer">
+      <span>Terminal.exe</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/floppy_disk.png" alt="Floppy">
+      <span>Save State</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/pen_paper2.png" alt="Notes">
+      <span>Field Notes</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/glitch_swirl.png" alt="Glitch">
+      <span>Glitch.dll</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/ms_prompt.png" alt="MS-DOS">
+      <span>MS-DOS</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/folder_paint.png" alt="Archive">
+      <span>Art Archive</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/broadcast_failure.png" alt="Broadcast">
+      <span>Broadcast</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/x_button.png" alt="Delete">
+      <span>Delete?</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/critical_exception.png" alt="Exception">
+      <span>Exception</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/recurrsion_error.png" alt="Recursion">
+      <span>Loop.err</span>
+    </div>
+  </div>
+
+  <!-- EXPOSURE CHAMBER -->
+  <div class="panel" style="margin-bottom:8px;">
+    <div class="panel-title">
+      <img src="assets/code_crack.png" class="terminal-title-img" alt="">
+      Exposure Chamber — Where Systems Become Legible
+    </div>
+    <div class="panel-body">
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px;">
+        <div class="glitch-cell">
+          <img src="assets/popup_warp.png" alt="popup warp">
+          <span>Popup Warp — the dialog as confession</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/crazy_popups.png" alt="crazy popups">
+          <span>Crazy Popups — multiplied exposure</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/loop_series.png" alt="loop series">
+          <span>Loop Series — recursion as trap</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/fatal_popup.png" alt="fatal popup">
+          <span>Fatal Popup — the final confession</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/dark_purple.png" alt="dark purple">
+          <span>Dark Purple — hidden infrastructure</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/code_crack2.png" alt="code crack 2">
+          <span>Code Crack II — the second seam</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/code_crack3.png" alt="code crack 3">
+          <span>Code Crack III — fracture as method</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/existential_inquiry.png" alt="existential inquiry">
+          <span>Existential Inquiry — machine asking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MANIFESTO TICKER -->
+  <div class="manifesto-bar">
+    <span class="manifesto-text">
+      ✦ GLITCH IS NOT FAILURE — GLITCH IS EXPOSURE ✦ THE SEAMLESS INTERFACE IS A CONSTRUCTED FICTION ✦ EVERY BREAKDOWN REVEALS A POWER STRUCTURE ✦ FAILURE IS A SITE OF POLITICAL POTENTIAL ✦ THE BINARY IS ALWAYS A CHOICE ✦ SMOOTH SURFACES HIDE THE SEAMS ✦ COMPUTATIONAL FLUIDITY DEMANDS WE LOOK ✦ ERROR IS CRITIQUE ✦
+    </span>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <img src="assets/x_button.png" style="height:20px; image-rendering:pixelated; vertical-align:middle;" alt="x">
+    &nbsp; GLITCH.LOG v0.ERROR :: Made with ♡ and productive failure ::
+    <a href="#">Email me</a> | <a href="#">Sign Guestbook</a> | <a href="#">Top</a>
+    &nbsp; <img src="assets/x_button.png" style="height:20px; image-rendering:pixelated; vertical-align:middle;" alt="x">
+    <br>
+    <span style="font-size:12px; color:#888;">Best viewed in Netscape Navigator 4.0 at 800×600. © 2024 GLITCH.LOG. Failure is not a bug.</span>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
