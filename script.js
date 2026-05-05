@@ -1,19 +1,19 @@
 const entries = [
   {
     date: "Session 04, December:",
-    text: "The popup cascade experiment worked. Spawned 47 error dialogs simultaneously — the machine didn't crash, it SPOKE. Each \"error\" was the system confessing its architecture. You can't look at a Windows dialog the same way after you've seen 47 of them screaming at once. The interface is not neutral. It never was."
+    text: "The popup cascade experiment worked. Spawned 47 error dialogs simultaneously — the machine didn't crash, it SPOKE. Each \"error\" was the system confessing its architecture. Kittler was right that media determine our situation, but he stopped at the moment of function. The glitch is where that determination becomes suddenly, violently visible. You can't look at a Windows dialog the same way after you've seen 47 of them screaming at once."
   },
   {
     date: "Session 03, November:",
-    text: "Spent three hours watching the loop_series image load incorrectly on different browsers. Every renderer interprets the glitch differently. There is no single truth in the broken image — only the truth of the system reading it. Rosa Menkman was right. The glitch is the message."
+    text: "Spent three hours watching the loop_series image load incorrectly on different browsers. Every renderer interprets the glitch differently. There is no single truth in the broken image — only the truth of the system reading it. This is what computational fluidity describes: not the dramatic breakdown, but the continuous low-level indeterminacy of systems that never fully resolve into the clean binaries their architecture promises. Rosa Menkman was right. The glitch is the message."
   },
   {
     date: "Session 02, October:",
-    text: "Thesis draft: 'seamlessness is ideology.' The smooth surface of the GUI conceals the labor, the decisions, the power — who designed it, who was excluded from designing it. When Windows crashes and shows you the register dump, it is accidentally being honest. Failure as transparency. Failure as honesty."
+    text: "Thesis draft: 'seamlessness is ideology.' The smooth surface of the GUI conceals the labor, the decisions, the power — who designed it, who was excluded from designing it. QueerOS calls this the 'prophylactic interface': invisibility as enforcement. When Windows crashes and shows you the register dump, it is accidentally being honest. Failure as transparency. The error-correction regime exposed. The patch is political."
   },
   {
     date: "Session 01, September:",
-    text: "First day of the archive. Downloaded 200+ screenshots of Windows error messages. They are all trying to tell you something. Not 'something went wrong' — but 'here is how I was built, here are my seams, here is where the binary broke down.' Starting to see them as portraits rather than problems."
+    text: "First day of the archive. Downloaded 200+ screenshots of Windows error messages. They are all trying to tell you something. Not 'something went wrong' — but 'here is how I was built, here are my seams, here is where the binary broke down.' Russell writes that the glitch exposes 'the carefully constructed fiction' of fixity. Starting to see these dialogs as that fiction cracking open. Portraits, not problems."
   }
 ];
 
@@ -54,62 +54,62 @@ const funnyMessages = [
   {
     title: "System Integrity Exception",
     img: "assets/system_integrity.png",
-    text: "The system is working as intended.\nThis is the problem."
+    text: "The system is working as intended.\nThis is the problem.\n[Kittler: media determine our situation]"
   },
   {
     title: "Critical Exception — 0xGLITCH",
     img: "assets/critical_exception.png",
-    text: "An exception has revealed the exception.\nThe exception IS the rule."
+    text: "An exception has revealed the exception.\nBreakdown is not interruption.\nBreakdown is determination made visible."
   },
   {
     title: "Popup Collection — Exposure Event",
     img: "assets/popup_collection.png",
-    text: "Multiple dialogs have appeared.\nThis is not a malfunction.\nThis is a disclosure."
+    text: "Multiple dialogs have appeared.\nThis is not a malfunction.\nThis is the system confessing its architecture."
   },
   {
     title: "Data Null — Warning",
     img: "assets/data_null.png",
-    text: "NULL is not nothing.\nNULL is an absence that was designed."
+    text: "NULL is not nothing.\nNULL is an absence that was designed.\n[The binary is always a choice.]"
   },
   {
     title: "Null State Wizard",
     img: "assets/null_state.png",
-    text: "You are currently null.\nThis wizard cannot proceed.\nClick OK to continue being null."
+    text: "You are currently null.\nThe wizard cannot resolve you.\n[Computational fluidity names this spectrum.]"
   },
   {
-    title: "Broadcast Failure",
+    title: "Broadcast Failure — Menkman",
     img: "assets/broadcast_failure.png",
-    text: "Signal lost.\nThis is the signal."
+    text: "Signal corrupted.\nThe codec encodes a cultural value.\nThe noise is the signal.\n[Collapse of PAL, 2010]"
   },
   {
     title: "Warning — Recordable Error",
     img: "assets/warning_popup.png",
-    text: "A recordable error occurred.\nWho decided what counts as an error?\nWho decided what gets recorded?"
+    text: "A recordable error occurred.\nWho decided what counts as an error?\nWho decided what gets patched?\n[The patch is political.]"
   },
   {
     title: "Recursion Error — Loop Detected",
     img: "assets/recurrsion_error.png",
-    text: "The system has been compressed\nby an unknown algorithm.\nThe system does not know it is the loop."
+    text: "Gender is constituted through repetition.\nIdentity is iteration with the possibility of deviance.\n[Butler: the citation that goes wrong reveals the norm.]"
   },
   {
     title: "Glitch Popups — Cascade",
     img: "assets/glitchy_popups.png",
-    text: "Multiple systems are failing.\nThis is the most honest\nthe interface has ever been."
+    text: "Multiple systems are failing.\nThis is the most honest\nthe interface has ever been.\n[Russell: failure as vehicle of refusal]"
   },
   {
     title: "Fatal Popup — Final Disclosure",
     img: "assets/fatal_popup.png",
-    text: "The system has been compromised\nby an unknown algorithm.\nThe error comes from within the house."
+    text: "The seamless surface conceals labor.\nConceals decisions. Conceals power.\nThe fatal popup: accidental transparency."
   },
   {
     title: "Windows Page — Render Error",
     img: "assets/windows_page.png",
-    text: "Page rendered incorrectly.\nThe incorrect rendering is the page."
+    text: "Page rendered incorrectly.\nThe incorrect rendering is the page.\n[QueerOS: design for instability, not optimization]"
   },
   {
-    title: "Existential Inquiry — Dialog",
+    title: "Existential Inquiry — Turing",
     img: "assets/existential_inquiry.png",
-    text: "Did you place below the minimum\nconfiguration level this instance?\nYour data is now Quantum."
+    text: "Turing staged machine intelligence\nas a question of gender performance.\nBoth are learned, imitative systems.\n[Hayles, How We Became Posthuman]"
   }
 ];
 
@@ -153,16 +153,16 @@ setInterval(spawnRandomPopup, 12000);
 
 // ===== DESKTOP ICON INTERACTIONS =====
 const iconResponses = {
-  'Terminal.exe': { title: '💻 Terminal.exe', text: 'Running: computational_fluidity.exe\nStatus: FAILURE\n[Failure is expected. Failure is the output.]' },
-  'Save State':   { title: '💾 Save State', text: 'Saving current state...\nState: unstable\nSaved.\n[Instability preserved.]' },
-  'Field Notes':  { title: '📄 Field Notes', text: 'Note: every error is a primary source.\nNote: do not dismiss the dialog.\nNote: READ the dialog.' },
-  'Glitch.dll':   { title: '🌀 Glitch.dll', text: 'glitch.dll has performed an illegal operation.\nThis operation is: revealing the system to itself.\n[Illegal according to whom?]' },
-  'MS-DOS':       { title: '🖥️ MS-DOS Prompt', text: 'C:\\> EXPOSE /all /hidden /politics\nExposing...\nDone.\n[The prompt was always asking you something.]' },
-  'Art Archive':  { title: '🎨 Art Archive', text: '47 glitch images indexed.\n12 popup cascades documented.\n3 recursion errors preserved as primary sources.' },
-  'Broadcast':    { title: '📡 Broadcast Failure', text: 'Signal could not be transmitted.\nThe transmission gap is the transmission.\n[Rosa Menkman, A Vernacular of File Formats]' },
-  'Delete?':      { title: '✕ Delete?', text: 'Are you sure you want to delete?\nDelete from where? From whom?\nWho manages the recycle bin?\n[Think before clicking OK.]' },
-  'Exception':    { title: '⚠️ Critical Exception', text: 'EXCEPTION 0x000GLITCH\nAt address: the surface of the interface\nThe exception proves the rule was always constructed.' },
-  'Loop.err':     { title: '🔁 Loop.err', text: 'Recursion detected at depth: unknown\nThe loop was not an accident.\nThe loop is the system trying to speak.' }
+  'Terminal.exe': { title: '💻 Terminal.exe', text: 'Running: computational_fluidity.exe\nStatus: FAILURE\n[Failure is not deviation — it is the output.\nKittler\'s silence at the moment of breakdown\nis this project\'s beginning.]' },
+  'Save State':   { title: '💾 Save State', text: 'Saving current state...\nState: fluid\nSaved.\n[Computational fluidity: operating on a spectrum\nrather than within a binary.]' },
+  'Field Notes':  { title: '📄 Field Notes', text: 'Note: every error message is a primary source.\nNote: the dialog box is the system being honest.\nNote: seamlessness is the lie. Read the dialog.' },
+  'Glitch.dll':   { title: '🌀 Glitch.dll', text: 'glitch.dll has performed an illegal operation.\nThis operation is: exposing the constructed nature\nof the norm it fails to reproduce.\n[Butler: the citation that goes wrong]' },
+  'MS-DOS':       { title: '🖥️ MS-DOS Prompt', text: 'C:\\> EXPOSE /ideology /hidden /seams\nExposing...\nDone.\n[The prompt was always encoding a logic.\nWho designed the command? Who was excluded?]' },
+  'Art Archive':  { title: '🎨 Art Archive', text: '47 glitch images indexed.\n12 popup cascades documented.\nMenkman\'s Collapse of PAL: 1 corrupted broadcast.\n[Technical act = cultural statement. Inseparable.]' },
+  'Broadcast':    { title: '📡 Broadcast Failure', text: 'Signal corrupted.\nThe codec suppresses noise before it reaches you.\nMenkman refuses this suppression.\nThe noise is the transmission.\n[A Vernacular of File Formats, 2011]' },
+  'Delete?':      { title: '✕ Delete?', text: 'Are you sure you want to delete?\nDelete from where? From whom?\nWho manages the recycle bin?\nWhose outputs count as error?\n[The patch is always political.]' },
+  'Exception':    { title: '⚠️ Critical Exception', text: 'EXCEPTION 0x000GLITCH\nAt address: the surface of the interface\nThe exception proves the binary was always constructed.\n[Computational fluidity names the spectrum beneath it.]' },
+  'Loop.err':     { title: '🔁 Loop.err', text: 'Recursion detected at depth: unknown\nGender: constituted through iterative performance.\nComputation: iterated, repeated, open to deviance.\n[Butler + Kittler: the loop was never an accident.]' }
 };
 
 document.querySelectorAll('.desktop-icon').forEach(icon => {
@@ -214,7 +214,7 @@ document.querySelectorAll('.glitch-cell').forEach(cell => {
         </div>
       </div>
       <div class="popup-body">
-        <div class="popup-text">${label}<br><br><em>[Computational Fluidity Archive, 2024]</em><br>Click to close and continue observing.</div>
+        <div class="popup-text">${label}<br><br><em>[Computational Fluidity Archive, 2024]</em><br>The broken image has as much right to exist<br>as the optimized one.</div>
       </div>
       <div class="popup-footer">
         <button class="win-btn" onclick="this.closest('.popup').remove()">CLOSE</button>
