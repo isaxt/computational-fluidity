@@ -78,6 +78,39 @@
   </div>
 </div>
 
+<!-- NEW STARTUP POPUPS -->
+<div class="popup" id="popup-dead-data">
+  <div class="popup-titlebar">
+    <div class="title-text"><img src="assets/dead_data.png" class="titlebar-img" alt=""> Broadcast Interface Error</div>
+    <div class="popup-controls">
+      <div class="popup-btn">✕</div>
+    </div>
+  </div>
+  <div class="popup-body">
+    <img src="assets/dead_data.png" alt="dead data" style="width:100%;display:block;image-rendering:pixelated;margin-bottom:6px;">
+    <div class="popup-text">The PAL signal has collapsed into<br>abstract noise. The subject cannot<br>be reconstructed. <span class="blink-red">ERROR:DEADDATA</span></div>
+  </div>
+  <div class="popup-footer">
+    <button class="win-btn" onclick="this.closest('.popup').remove()">ACCEPT COLLAPSE</button>
+  </div>
+</div>
+
+<div class="popup" id="popup-50hz">
+  <div class="popup-titlebar">
+    <div class="title-text">⚠ 50Hz Error — Signal Failure</div>
+    <div class="popup-controls">
+      <div class="popup-btn">✕</div>
+    </div>
+  </div>
+  <div class="popup-body">
+    <img src="assets/50hz_error.png" alt="50hz error" style="width:100%;display:block;image-rendering:pixelated;margin-bottom:6px;">
+    <div class="popup-text">50Hz ERROR<br>50Hz ERROR<br>50Hz ERROR<br><em>The frequency was always a norm.</em></div>
+  </div>
+  <div class="popup-footer">
+    <button class="win-btn" onclick="this.closest('.popup').remove()">OK</button>
+  </div>
+</div>
+
 <!-- MAIN SITE -->
 <div class="site-wrapper">
 
@@ -87,18 +120,33 @@
     <div class="banner-sub">~*~ Computational Fluidity Research Terminal v0.ERROR ~*~</div>
   </div>
 
-  <!-- SPRITE BAR -->
+  <!-- SPRITE BAR — expanded with new assets -->
   <div class="sprite-bar">
-    <img src="assets/computer.png"        alt="computer"    title="Terminal Access">
-    <img src="assets/floppy_disk.png"     alt="floppy"      title="Floppy: Save the State">
-    <img src="assets/ms_prompt.png"       alt="ms-dos"      title="MS-DOS Prompt">
-    <img src="assets/keyboard.png"        alt="keyboard"    title="Input Device">
-    <img src="assets/cd_paint.png"        alt="cd"          title="Media">
-    <img src="assets/pen_paper.png"       alt="notes"       title="Field Notes">
-    <img src="assets/folder.png"          alt="folder"      title="Archive">
-    <img src="assets/asset5.png"          alt="chip"        title="The Chip Encodes Power">
+    <img src="assets/computer.png"        alt="computer"       title="Terminal Access">
+    <img src="assets/floppy_disk.png"     alt="floppy"         title="Floppy: Save the State">
+    <img src="assets/ms_prompt.png"       alt="ms-dos"         title="MS-DOS Prompt">
+    <img src="assets/keyboard.png"        alt="keyboard"       title="Input Device">
+    <img src="assets/cd_paint.png"        alt="cd"             title="Media">
+    <img src="assets/pen_paper.png"       alt="notes"          title="Field Notes">
+    <img src="assets/folder.png"          alt="folder"         title="Archive">
+    <img src="assets/asset5.png"          alt="chip"           title="The Chip Encodes Power">
+    <img src="assets/solo_pop.png"        alt="solo popup"     title="Solo Popup — isolated disclosure">
+    <img src="assets/dialog_box.png"      alt="dialog box"     title="Dialog Box — the machine asking">
+    <img src="assets/single_pop.png"      alt="single popup"   title="Single Pop — signal failure detected">
+    <img src="assets/h1_h2.png"           alt="h1 h2 glitch"   title="H1 (Glitch) / H2 (Noise)">
     <span class="adopt-label">⟵ GLITCH IS NOT FAILURE ⟶</span>
-    <img src="assets/x_button.png"        alt="x"           title="Error? Or Revelation?">
+    <img src="assets/x_button.png"        alt="x"              title="Error? Or Revelation?">
+  </div>
+
+  <!-- SIGNAL STRIP — new rainbow/static assets as a full-width banner -->
+  <div class="signal-strip">
+    <img src="assets/rainbow_glitch.png"  alt="rainbow glitch"  title="Rainbow Glitch">
+    <img src="assets/color_spec.png"      alt="color spectrum"  title="Color Spectrum — the codec's palette">
+    <img src="assets/bw_stat.png"         alt="bw static"       title="B/W Static — before the signal">
+    <img src="assets/bw_glitch.png"       alt="bw glitch"       title="B/W Glitch — after the norm">
+    <img src="assets/bw_glitch2.png"      alt="bw glitch 2"     title="B/W Glitch II — the seam again">
+    <img src="assets/rainbow_static.png"  alt="rainbow static"  title="Rainbow Static — the spectrum refuses binary">
+    <img src="assets/color_pan.png"       alt="color panel"     title="Color Panel — GRAY / WHITE / RED / SLIME">
   </div>
 
   <!-- THREE COLUMNS -->
@@ -135,7 +183,7 @@
         </div>
       </div>
 
-      <div class="panel">
+      <div class="panel" style="margin-bottom:8px;">
         <div class="panel-title"><img src="assets/asset5.png" class="nav-icon-img" alt=""> Glitch Taxonomy</div>
         <div class="panel-body">
           <div class="asset-row" style="flex-wrap:wrap; justify-content:flex-start; gap:6px;">
@@ -143,8 +191,41 @@
             <img src="assets/glitch_feeling.png"    alt="glitch feeling"   title="Glitch Feeling — affect as political data" style="height:40px;">
             <img src="assets/glitch_swirl.png"      alt="glitch swirl"     title="Glitch Swirl — the structural condition" style="height:40px;">
             <img src="assets/code_crack.png"        alt="code crack"       title="Code Crack — where ideology leaks through" style="height:40px;">
+            <img src="assets/spiral_static.png"     alt="spiral static"    title="Spiral Static — the loop that consumes the signal" style="height:40px;">
+            <img src="assets/50hz_error.png"        alt="50hz error"       title="50Hz Error — the frequency as norm" style="height:40px;">
+            <img src="assets/h1_h2.png"             alt="h1 h2"            title="H1 (Glitch) / H2 (Noise) — taxonomy as politics" style="height:40px;">
           </div>
           <div style="text-align:center; margin-top:6px; font-size:13px; color:#555;">hover for annotations!</div>
+        </div>
+      </div>
+
+      <!-- NEW: Blue Series panel -->
+      <div class="panel">
+        <div class="panel-title">📡 Blue Series — Signal Studies</div>
+        <div class="panel-body" style="padding:4px;">
+          <div class="blue-series-grid">
+            <div class="blue-series-item">
+              <img src="assets/blue_1.png" alt="blue 1" title="Blue 1 — the vertical signal">
+              <span>I</span>
+            </div>
+            <div class="blue-series-item">
+              <img src="assets/blue_2.png" alt="blue 2" title="Blue 2 — the signal intensifies">
+              <span>II</span>
+            </div>
+            <div class="blue-series-item">
+              <img src="assets/blue_3.png" alt="blue 3" title="Blue 3 — the signal fractures">
+              <span>III</span>
+            </div>
+            <div class="blue-series-item">
+              <img src="assets/blue_4.png" alt="blue 4" title="Blue 4 — the signal as architecture">
+              <span>IV</span>
+            </div>
+            <div class="blue-series-item blue-series-wide">
+              <img src="assets/blue_5.png" alt="blue 5" title="Blue 5 — the signal dissipates">
+              <span>V</span>
+            </div>
+          </div>
+          <div style="font-size:12px; color:#555; text-align:center; margin-top:4px; font-family:'VT323',monospace;">the vertical as carrier. click to open.</div>
         </div>
       </div>
     </div>
@@ -156,7 +237,8 @@
         <img src="assets/code_crack.png" alt="Code Crack" style="width:100%; display:block; image-rendering:pixelated;">
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+      <!-- EXPANDED: 3-up image row with new assets -->
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-bottom:8px;">
         <div class="farm-display">
           <div class="farm-label">📡 Popup Collection I</div>
           <img src="assets/popup_collection.png" alt="Popup Collection">
@@ -164,6 +246,34 @@
         <div class="farm-display">
           <div class="farm-label">📡 Broadcast Failure</div>
           <img src="assets/broadcast_failure.png" alt="Broadcast Failure">
+        </div>
+        <div class="farm-display">
+          <div class="farm-label">📡 Dead Data</div>
+          <img src="assets/dead_data.png" alt="Dead Data">
+        </div>
+      </div>
+
+      <!-- NEW: Pop Groups Lightbox Row -->
+      <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-bottom:8px;">
+        <div class="farm-display pop-thumb" data-label="Pop Ups — the first cascade" data-src="pop_ups">
+          <div class="farm-label" style="font-size:7px;">📡 Pop Ups</div>
+          <img src="assets/pop_ups.png" alt="Pop Ups">
+        </div>
+        <div class="farm-display pop-thumb" data-label="Pop Ups II — amplified" data-src="pop_ups2">
+          <div class="farm-label" style="font-size:7px;">📡 Pop Ups II</div>
+          <img src="assets/pop_ups2.png" alt="Pop Ups 2">
+        </div>
+        <div class="farm-display pop-thumb" data-label="Pop Group 0 — the cluster" data-src="pop_groupo">
+          <div class="farm-label" style="font-size:7px;">📡 Group 0</div>
+          <img src="assets/pop_groupo.png" alt="Pop Group 0">
+        </div>
+        <div class="farm-display pop-thumb" data-label="Pop Group 2 — progress bars" data-src="pop_group2">
+          <div class="farm-label" style="font-size:7px;">📡 Group II</div>
+          <img src="assets/pop_group2.png" alt="Pop Group 2">
+        </div>
+        <div class="farm-display pop-thumb" data-label="Pop Group 3 — pink horizon" data-src="pop_group3">
+          <div class="farm-label" style="font-size:7px;">📡 Group III</div>
+          <img src="assets/pop_group3.png" alt="Pop Group 3">
         </div>
       </div>
 
@@ -183,11 +293,35 @@
               [!] Glitch is DETERMINATION.<br>
               [!] The seamless is ideology.<br>
               ──────────────────────────────────<br>
+              Scanning new signals...<br>
+              &nbsp; blue_series.dat &nbsp;&nbsp;&nbsp; <span style="color:#ffff00;">LOADED</span><br>
+              &nbsp; pop_groups.exe &nbsp;&nbsp; <span style="color:#ffff00;">LOADED</span><br>
+              &nbsp; rainbow_glitch &nbsp;&nbsp; <span style="color:#ffff00;">LOADED</span><br>
+              &nbsp; spiral_static &nbsp;&nbsp;&nbsp; <span style="color:#ffff00;">LOADED</span><br>
+              ──────────────────────────────────<br>
               Binaries crumbling... <span style="color:#ffff00;">done.</span><br>
               Hidden architecture: <span style="color:#ff4444;">VISIBLE</span><br>
               > <span class="cursor-blink">_</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- NEW: Large Blue Studies -->
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title">📡 Large Blue Studies — Oscilloscope Series</div>
+        <div class="panel-body" style="padding:4px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+            <div class="farm-display">
+              <div class="farm-label" style="font-size:8px;">Large Blue I — waveform</div>
+              <img src="assets/large_blue.png" alt="Large Blue" style="width:100%;display:block;image-rendering:pixelated;">
+            </div>
+            <div class="farm-display">
+              <div class="farm-label" style="font-size:8px;">Large Blue II — oscillation</div>
+              <img src="assets/large_blue2.png" alt="Large Blue 2" style="width:100%;display:block;image-rendering:pixelated;">
+            </div>
+          </div>
+          <div style="font-size:13px; color:#555; text-align:center; margin-top:5px; font-family:'VT323',monospace;">the wave refuses to resolve. the wave is always already the glitch.</div>
         </div>
       </div>
 
@@ -206,6 +340,9 @@
             <div class="badge">Computational Fluidity</div>
             <div class="badge teal">QueerOS</div>
             <div class="badge purple">Menkman Studies</div>
+            <div class="badge maroon">50Hz Error</div>
+            <div class="badge">Signal Studies</div>
+            <div class="badge teal">PAL Collapse</div>
           </div>
         </div>
       </div>
@@ -221,10 +358,40 @@
         </div>
       </div>
 
+      <!-- NEW: Pop Glitch panel -->
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title">🌀 Pop Glitch Studies</div>
+        <div class="panel-body" style="padding:4px;">
+          <img src="assets/pop_glitch.png" alt="Pop Glitch" style="width:100%; display:block; image-rendering:pixelated; margin-bottom:4px;">
+          <div style="font-size:12px; color:#555; text-align:center; margin-bottom:4px;">fig. 2 — the glitch that remembers the interface</div>
+          <img src="assets/pop_glitch2.png" alt="Pop Glitch 2" style="width:100%; display:block; image-rendering:pixelated;">
+          <div style="font-size:12px; color:#555; text-align:center;">fig. 3 — the interface that forgets itself</div>
+        </div>
+      </div>
+
       <div class="panel" style="margin-bottom:8px;">
         <div class="panel-title"><img src="assets/cd_paint.png" class="nav-icon-img" alt=""> windows_page.render</div>
         <div class="panel-body" style="padding:4px;">
           <img src="assets/windows_page.png" alt="Windows Page" style="width:100%; display:block; image-rendering:pixelated;">
+        </div>
+      </div>
+
+      <!-- NEW: Color Studies -->
+      <div class="panel" style="margin-bottom:8px;">
+        <div class="panel-title">🎨 Color Studies — Spectrum Archive</div>
+        <div class="panel-body" style="padding:4px;">
+          <img src="assets/color_pop.png" alt="Color Pop" style="width:100%; display:block; image-rendering:pixelated; margin-bottom:4px;">
+          <div style="font-size:12px; color:#555; text-align:center; margin-bottom:4px;">Color Pop — the spectrum refusing compression</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:4px;">
+            <div>
+              <img src="assets/color_pan.png" alt="Color Panel" style="width:100%; display:block; image-rendering:pixelated;">
+              <div style="font-size:11px; color:#555; text-align:center;">Color Panel</div>
+            </div>
+            <div>
+              <img src="assets/a0_1c.png" alt="A0 1C" style="width:100%; display:block; image-rendering:pixelated;">
+              <div style="font-size:11px; color:#555; text-align:center;">A0_1C hex</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -257,6 +424,57 @@
     </div>
   </div>
 
+  <!-- NEW: SIGNAL STUDIES SECTION — full width pop group gallery -->
+  <div class="panel" style="margin-bottom:8px;">
+    <div class="panel-title">
+      📡 Pop Group Studies — Cascade Archive [2024]
+    </div>
+    <div class="panel-body" style="padding:6px;">
+      <div class="pop-group-gallery">
+        <div class="pop-group-item">
+          <img src="assets/pop_ups.png" alt="Pop Ups">
+          <div class="pop-group-label">Pop Ups — Entry Point</div>
+          <div class="pop-group-anno">the first cascade. the dialog as arrival. who is notified and who is excluded?</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/pop_ups2.png" alt="Pop Ups 2">
+          <div class="pop-group-label">Pop Ups II</div>
+          <div class="pop-group-anno">iteration does not resolve. it compounds. each popup: another seam exposed.</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/pop_groupo.png" alt="Pop Group 0">
+          <div class="pop-group-label">Group 0 — Origin</div>
+          <div class="pop-group-anno">the zero-state cluster. origin is not innocent. it was designed.</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/pop_group2.png" alt="Pop Group 2">
+          <div class="pop-group-label">Group II — Progress</div>
+          <div class="pop-group-anno">progress bars as ideology. 99% complete. always. [Kittler: the medium controls]</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/pop_group3.png" alt="Pop Group 3">
+          <div class="pop-group-label">Group III — Horizon</div>
+          <div class="pop-group-anno">the pink horizon: where the interface meets the real. a border that was always political.</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/pop_group4.png" alt="Pop Group 4">
+          <div class="pop-group-label">Group IV — Density</div>
+          <div class="pop-group-anno">maximum density. the system confessing everything at once. can you read it all?</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/pop_group5.png" alt="Pop Group 5">
+          <div class="pop-group-label">Group V — Saturation</div>
+          <div class="pop-group-anno">saturation as critique. more is not glitch. more is the truth of accumulation.</div>
+        </div>
+        <div class="pop-group-item">
+          <img src="assets/crazy_pop.png" alt="Crazy Pop">
+          <div class="pop-group-label">Crazy Pop — Menkman</div>
+          <div class="pop-group-anno">after Menkman: the window that will not be managed. the dialog as fugue state.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FIELD NOTES / DIARY SECTION -->
   <div class="woven-section" style="margin-bottom:8px;">
     <div class="panel-title">
@@ -266,20 +484,21 @@
     <div style="display:grid; grid-template-columns:180px 1fr;">
       <div style="background:#a0a0a0; border-right:2px solid #404040; padding:4px;">
         <ul class="diary-entry-list">
-          <li class="active" onclick="showEntry(0, this)">Session 04 — Dec</li>
-          <li onclick="showEntry(1, this)">Session 03 — Nov</li>
-          <li onclick="showEntry(2, this)">Session 02 — Oct</li>
-          <li onclick="showEntry(3, this)">Session 01 — Sep</li>
+          <li class="active" onclick="showEntry(0, this)">Session 05 — Jan</li>
+          <li onclick="showEntry(1, this)">Session 04 — Dec</li>
+          <li onclick="showEntry(2, this)">Session 03 — Nov</li>
+          <li onclick="showEntry(3, this)">Session 02 — Oct</li>
+          <li onclick="showEntry(4, this)">Session 01 — Sep</li>
         </ul>
       </div>
       <div class="diary-content" id="diary-text">
-        <div class="diary-date">Session 04, December:</div>
-        The popup cascade experiment worked. Spawned 47 error dialogs simultaneously — the machine didn't crash, it SPOKE. Each "error" was the system confessing its architecture. Kittler was right that media determine our situation, but he stopped at the moment of function. The glitch is where determination becomes visible. You can't look at a Windows dialog the same way after you've seen 47 of them screaming at once.
+        <div class="diary-date">Session 05, January:</div>
+        Expanded the archive. The Blue Series is not a series about color — it is a series about the vertical signal as carrier, as column, as the posture of the system before it speaks. Blue_1 through Blue_5: each frame an intensification. By Blue_5 the signal has become its own static. The pop groups confirm this: cascade is not chaos. It is the interface finally telling the truth about how many things it is hiding. Pop_group4 is the most honest thing I have ever seen a computer produce. 47 dialogs. All asking. None waiting for an answer.
       </div>
     </div>
   </div>
 
-  <!-- DESKTOP ICON BAR -->
+  <!-- DESKTOP ICON BAR — expanded -->
   <div class="desktop-bar">
     <div class="desktop-icon">
       <img src="assets/computer.png" alt="Computer">
@@ -321,9 +540,33 @@
       <img src="assets/recurrsion_error.png" alt="Recursion">
       <span>Loop.err</span>
     </div>
+    <div class="desktop-icon">
+      <img src="assets/spiral_static.png" alt="Spiral Static">
+      <span>Spiral.err</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/50hz_error.png" alt="50Hz Error">
+      <span>50Hz.err</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/rainbow_glitch.png" alt="Rainbow Glitch">
+      <span>Rainbow.exe</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/solo_pop.png" alt="Solo Pop">
+      <span>SoloPop</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/dialog_box.png" alt="Dialog Box">
+      <span>Dialog.sys</span>
+    </div>
+    <div class="desktop-icon">
+      <img src="assets/h1_h2.png" alt="H1 H2">
+      <span>H1/H2.txt</span>
+    </div>
   </div>
 
-  <!-- EXPOSURE CHAMBER -->
+  <!-- EXPOSURE CHAMBER — expanded with new assets -->
   <div class="panel" style="margin-bottom:8px;">
     <div class="panel-title">
       <img src="assets/code_crack.png" class="terminal-title-img" alt="">
@@ -331,6 +574,7 @@
     </div>
     <div class="panel-body">
       <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:6px;">
+        <!-- Original 8 -->
         <div class="glitch-cell">
           <img src="assets/popup_warp.png" alt="popup warp">
           <span>Popup Warp — the dialog as architectural confession</span>
@@ -363,6 +607,71 @@
           <img src="assets/existential_inquiry.png" alt="existential inquiry">
           <span>Existential Inquiry — the Turing machine asking back</span>
         </div>
+        <!-- New assets -->
+        <div class="glitch-cell">
+          <img src="assets/rainbow_glitch.png" alt="rainbow glitch">
+          <span>Rainbow Glitch — the spectrum refusing compression</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/color_spec.png" alt="color spectrum">
+          <span>Color Spectrum — the codec's palette exposed</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/dead_data.png" alt="dead data">
+          <span>Dead Data — signal collapsed into abstract noise</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/dialog_box.png" alt="dialog box">
+          <span>Dialog Box — the machine mid-question</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/solo_pop.png" alt="solo pop">
+          <span>Solo Pop — isolated disclosure, single witness</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/single_pop.png" alt="single pop">
+          <span>Single Pop — signal failure, one dialog</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/bw_stat.png" alt="bw static">
+          <span>B/W Static — before the signal resolves</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/bw_glitch.png" alt="bw glitch">
+          <span>B/W Glitch — after the norm breaks</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/bw_glitch2.png" alt="bw glitch 2">
+          <span>B/W Glitch II — the seam, again</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/spiral_static.png" alt="spiral static">
+          <span>Spiral Static — the loop consuming the signal</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/50hz_error.png" alt="50hz error">
+          <span>50Hz ERROR — the frequency as enforced norm</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/h1_h2.png" alt="h1 h2">
+          <span>H1/H2 — taxonomy is always politics</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/rainbow_static.png" alt="rainbow static">
+          <span>Rainbow Static — the spectrum that refuses binary</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/color_pan.png" alt="color panel">
+          <span>Color Panel — GRAY / WHITE / RED / SLIME</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/a0_1c.png" alt="a0 1c">
+          <span>A0_1C — hex as confession of value</span>
+        </div>
+        <div class="glitch-cell">
+          <img src="assets/pop_glitch.png" alt="pop glitch">
+          <span>Pop Glitch — the interface that remembers itself</span>
+        </div>
       </div>
     </div>
   </div>
@@ -370,7 +679,7 @@
   <!-- MANIFESTO TICKER -->
   <div class="manifesto-bar">
     <span class="manifesto-text">
-      ✦ GLITCH IS NOT FAILURE — GLITCH IS EXPOSURE ✦ SEAMLESSNESS IS IDEOLOGY ✦ EVERY BREAKDOWN REVEALS A POWER STRUCTURE ✦ FAILURE IS THE SYSTEM'S MOST HONEST EXPRESSION ✦ THE BINARY IS ALWAYS A CONSTRUCTION ✦ SMOOTH SURFACES HIDE POLITICAL DECISIONS ✦ COMPUTATIONAL FLUIDITY DEMANDS WE LOOK ✦ ERROR IS DETERMINATION ✦ THE NOISE IS THE SIGNAL ✦
+      ✦ GLITCH IS NOT FAILURE — GLITCH IS EXPOSURE ✦ SEAMLESSNESS IS IDEOLOGY ✦ EVERY BREAKDOWN REVEALS A POWER STRUCTURE ✦ FAILURE IS THE SYSTEM'S MOST HONEST EXPRESSION ✦ THE BINARY IS ALWAYS A CONSTRUCTION ✦ SMOOTH SURFACES HIDE POLITICAL DECISIONS ✦ COMPUTATIONAL FLUIDITY DEMANDS WE LOOK ✦ ERROR IS DETERMINATION ✦ THE NOISE IS THE SIGNAL ✦ 50Hz IS A NORM ✦ THE VERTICAL SIGNAL IS A CARRIER ✦ THE CASCADE IS THE TRUTH ✦ WHO DESIGNED THE DIALOG? ✦ WHO WAS EXCLUDED FROM DESIGNING IT? ✦ DEAD DATA IS NOT DEAD ✦ THE SPIRAL CONSUMES ITSELF TO SPEAK ✦
     </span>
   </div>
 

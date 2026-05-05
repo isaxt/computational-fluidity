@@ -135,10 +135,12 @@ body {
   border-color: var(--dialog-border-darker) var(--dialog-border-light) var(--dialog-border-light) var(--dialog-border-darker);
 }
 
-#popup-welcome { top: 80px;    left: 60px;   width: 340px; }
-#popup-error   { top: 200px;   right: 80px;  width: 320px; }
-#popup-update  { bottom: 180px; left: 100px; width: 360px; }
-#popup-cdrom   { bottom: 100px; right: 60px; width: 340px; }
+#popup-welcome   { top: 80px;    left: 60px;   width: 340px; }
+#popup-error     { top: 200px;   right: 80px;  width: 320px; }
+#popup-update    { bottom: 180px; left: 100px; width: 360px; }
+#popup-cdrom     { bottom: 100px; right: 60px; width: 340px; }
+#popup-dead-data { top: 320px;   left: 30px;   width: 320px; }
+#popup-50hz      { top: 140px;   right: 30px;  width: 300px; }
 
 /* ===== MAIN LAYOUT ===== */
 .site-wrapper {
@@ -195,14 +197,14 @@ body {
 }
 
 .banner::after {
-  content: '✦ GLITCH IS NOT FAILURE — GLITCH IS EXPOSURE ✦ THE SEAMLESS INTERFACE IS A FICTION ✦ ERROR IS CRITIQUE ✦ BREAKDOWN IS REVELATION ✦';
+  content: '✦ GLITCH IS NOT FAILURE — GLITCH IS EXPOSURE ✦ THE SEAMLESS INTERFACE IS A FICTION ✦ ERROR IS CRITIQUE ✦ BREAKDOWN IS REVELATION ✦ 50Hz IS A NORM ✦ THE CASCADE IS THE TRUTH ✦';
   display: block;
   color: #00ffff;
   font-size: 14px;
   margin-top: 6px;
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 18s linear infinite;
+  animation: marquee 22s linear infinite;
 }
 
 @keyframes marquee {
@@ -230,15 +232,18 @@ body {
   cursor: pointer;
 }
 
-.sprite-bar img:nth-child(1) { animation-delay: 0.0s; }
-.sprite-bar img:nth-child(2) { animation-delay: 0.2s; }
-.sprite-bar img:nth-child(3) { animation-delay: 0.4s; }
-.sprite-bar img:nth-child(4) { animation-delay: 0.6s; }
-.sprite-bar img:nth-child(5) { animation-delay: 0.8s; }
-.sprite-bar img:nth-child(6) { animation-delay: 1.0s; }
-.sprite-bar img:nth-child(7) { animation-delay: 1.2s; }
-.sprite-bar img:nth-child(8) { animation-delay: 1.4s; }
-.sprite-bar img:nth-child(9) { animation-delay: 1.6s; }
+.sprite-bar img:nth-child(1)  { animation-delay: 0.0s; }
+.sprite-bar img:nth-child(2)  { animation-delay: 0.2s; }
+.sprite-bar img:nth-child(3)  { animation-delay: 0.4s; }
+.sprite-bar img:nth-child(4)  { animation-delay: 0.6s; }
+.sprite-bar img:nth-child(5)  { animation-delay: 0.8s; }
+.sprite-bar img:nth-child(6)  { animation-delay: 1.0s; }
+.sprite-bar img:nth-child(7)  { animation-delay: 1.2s; }
+.sprite-bar img:nth-child(8)  { animation-delay: 1.4s; }
+.sprite-bar img:nth-child(9)  { animation-delay: 1.6s; }
+.sprite-bar img:nth-child(10) { animation-delay: 1.8s; }
+.sprite-bar img:nth-child(11) { animation-delay: 2.0s; }
+.sprite-bar img:nth-child(12) { animation-delay: 2.2s; }
 
 .sprite-bar img:hover { filter: brightness(1.4) drop-shadow(0 0 4px #fff); }
 
@@ -252,6 +257,30 @@ body {
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-5px); }
+}
+
+/* ===== SIGNAL STRIP — new full-width image bar ===== */
+.signal-strip {
+  display: flex;
+  gap: 0;
+  margin-bottom: 8px;
+  border: 2px solid var(--dialog-border-darker);
+  overflow: hidden;
+  height: 48px;
+}
+
+.signal-strip img {
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+  transition: flex 0.3s ease, filter 0.2s;
+  cursor: pointer;
+}
+
+.signal-strip img:hover {
+  flex: 3;
+  filter: brightness(1.3) saturate(1.5);
 }
 
 /* ===== THREE-COLUMN LAYOUT ===== */
@@ -324,9 +353,12 @@ body {
   border-color: var(--dialog-border-light) var(--dialog-border-darker) var(--dialog-border-darker) var(--dialog-border-light);
   background: #000;
   overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.15s;
 }
 
-.farm-display img { width: 100%; display: block; image-rendering: pixelated; }
+.farm-display:hover { filter: brightness(1.15); }
+.farm-display img { width: 100%; display:block; image-rendering: pixelated; }
 
 .farm-label {
   background: black;
@@ -501,7 +533,7 @@ body {
   font-size: 9px;
   color: var(--glitch-red);
   text-shadow: 0 0 6px var(--glitch-red);
-  animation: marquee 28s linear infinite;
+  animation: marquee 38s linear infinite;
   white-space: nowrap;
   letter-spacing: 1px;
 }
@@ -593,4 +625,107 @@ body {
   background: var(--dialog-bg);
   border: 2px solid;
   border-color: var(--dialog-border-light) var(--dialog-border-darker) var(--dialog-border-darker) var(--dialog-border-light);
+}
+
+/* ===== BLUE SERIES GRID ===== */
+.blue-series-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+
+.blue-series-wide {
+  grid-column: span 2;
+}
+
+.blue-series-item {
+  position: relative;
+  background: #000;
+  border: 1px solid var(--dialog-border-dark);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blue-series-item img {
+  width: 100%;
+  display: block;
+  image-rendering: pixelated;
+  transition: filter 0.2s;
+}
+
+.blue-series-item:hover img { filter: brightness(1.4) saturate(2); }
+
+.blue-series-item span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,128,0.8);
+  color: var(--lime);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  text-align: center;
+  padding: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.blue-series-item:hover span { opacity: 1; }
+
+/* ===== POP GROUP GALLERY ===== */
+.pop-group-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.pop-group-item {
+  background: #000;
+  border: 2px solid;
+  border-color: var(--dialog-border-light) var(--dialog-border-darker) var(--dialog-border-darker) var(--dialog-border-light);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.pop-group-item:hover { transform: scale(1.03); z-index: 10; position: relative; }
+
+.pop-group-item img {
+  width: 100%;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.pop-group-label {
+  background: linear-gradient(to right, var(--navy), #1084d0);
+  color: white;
+  font-family: 'VT323', monospace;
+  font-size: 13px;
+  padding: 2px 6px;
+  text-align: center;
+}
+
+.pop-group-anno {
+  background: var(--dialog-bg);
+  color: #444;
+  font-family: 'VT323', monospace;
+  font-size: 12px;
+  padding: 4px 6px;
+  line-height: 1.3;
+  display: none;
+}
+
+.pop-group-item:hover .pop-group-anno { display: block; }
+
+/* ===== POP THUMB (clickable thumbnail) ===== */
+.pop-thumb {
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+.pop-thumb:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  z-index: 5;
+  position: relative;
 }
